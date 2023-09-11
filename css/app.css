@@ -42,12 +42,16 @@ li {
   justify-content: space-between;
 }
 
-.container-large {
+.container {
   margin: 0 auto;
 }
 
+.container.medium {
+  width: 1200px;
+}
+
 .button {
-  background-color: #0160FF;
+  background-color: #0160ff;
   color: white;
   padding: 5px 10px;
 }
@@ -61,22 +65,26 @@ li {
 }
 
 /* debug */
+
+.debug .container.large {
+  border: 1px orange solid;
+}
+
+.debug .container.medium {
+  border: 1px #855789 solid;
+  height: 800px;
+}
+
 .debug .main-header {
   border: 1px palevioletred solid;
 }
 
-.debug .main-header_nav {
-}
-
-.debug .container-large {
-  border: 1px orange solid;
-}
-
 .debug .main-header_content {
   border: 1px black solid;
-  
 }
 
 .debug .main-header_list > li {
   border: 1px green solid;
 }
+
+.debug
