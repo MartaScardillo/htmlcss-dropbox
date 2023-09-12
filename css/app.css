@@ -158,11 +158,31 @@ li {
 
 .card {
   display: flex;
+  flex-direction: column;
 }
 
 .card-category {
   padding: 10px 0;
   width: 100%;
+}
+
+.card_title {
+  font-size: 25px;
+  padding: 20px 0;
+}
+
+.card_price {
+  font-weight: 800;
+}
+
+.card_price-detail {
+  font-weight: 200;
+  color: rgba(151, 151, 151, 0.894);
+}
+
+.list--column {
+  display: flex;
+  flex-direction: column;
 }
 
 .bg-lightblue {
@@ -201,4 +221,20 @@ li {
 
 .debug .card-category {
   border: 1px #765449 solid;
+}
+
+.debug .card_title {
+  border: 1px #567739 solid;
+}
+
+.debug .card_price {
+  border: 1px #375024 solid;
+}
+
+.debug .card_price-detail {
+  border: 1px #102394 solid;
+}
+
+.debug .list--column {
+  border: 1px #278438 solid;
 }
