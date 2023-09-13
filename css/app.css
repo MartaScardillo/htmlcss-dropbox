@@ -34,8 +34,8 @@ li {
   padding: 5px;
 }
 
-*[class^='col-'] {
-  height: 100%;
+.col-2 {
+  flex-basis: calc((100% / 12) * 2);
 }
 
 .col-4 {
@@ -81,20 +81,28 @@ li {
 
 .container {
   margin: 0 auto;
+  max-width: 1050px;
 }
 
 .container.medium {
-  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1250px;
 }
 
-.container.small {
-  max-width: 1000px;
+.container-fluid {
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .button {
   background-color: #0160ff;
   color: white;
-  padding: 10px 15px;
+  display: inline-block;
+	line-height: 44px;
+	font-size: 18px;
+	padding: 0 16px;
+	text-align: center;
+	white-space: nowrap;
 }
 
 .main-header_nav {
@@ -103,6 +111,10 @@ li {
 
 .main-header_list > li {
   margin: 10px 15px;
+}
+
+.card_body-header > p {
+  padding-bottom: 10px;
 }
 
 .hero_text {
@@ -128,6 +140,10 @@ li {
   margin-bottom: -150px;
 }
 
+.business-plan {
+  padding: 120px 0;
+}
+
 .business-plan_content {
   margin-top: 150px;
 }
@@ -138,38 +154,63 @@ li {
 }
 
 .business-plan_select {
-  width: 400px;
-  margin: 50px 0;
+  display: flex;
+  gap: 32px;
+  padding: 60px 0 40px;
 }
 
 .business-plan_choice {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.business-plan_radio {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
+.business-plan_choice > input {
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  margin: 5px;
-  border: 3px #d6d6d9 solid;
-  vertical-align: middle;
+  border: 2px rgba(0, 0, 0, 0.2) solid;
+  background-color: transparent;
+  appearance: none;
+  margin-bottom: 2px;
 }
 
-.business-plan_radio.radio--selected {
-  border: 5px #0160ff solid;
+.business-plan_choice > input:checked {
+  border: 5px blue solid;
 }
 
-.card {
+.business-plan_details {
+  row-gap: 50px;
+}
+
+.card-plan {
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  height: 100%;
+}
+
+.card-plan .card_header {
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+.card-plan .card_header, .card-plan .card_body {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.card-plan .card_header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card-plan .card_body {
+  padding-top: 35px;
+  padding-bottom: 35px;
   display: flex;
   flex-direction: column;
-  
-}
-
-.card-category {
-  padding: 10px 0;
-  width: 100%;
-  border: 1px rgba(151, 151, 151, 0.894) solid;
+  gap: 20px;
 }
 
 .card_title {
@@ -189,14 +230,10 @@ li {
   padding-bottom: 40px;
 }
 
-.list--column {
+.list-column {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-}
-
-.card_button {
-  padding: 40px 0 30px 0;
 }
 
 .card_button > .button{
@@ -211,30 +248,12 @@ li {
 
 }
 
-.icon {
-  padding-right: 5px;
-}
-
 .card_buy-now {
   padding-bottom: 30px;
 }
 
-.card_buy-now > a {
-  text-decoration: underline;
-  color: blue;
-}
-
 .card_body {
   padding: 30px;
-  border: 1px rgba(151, 151, 151, 0.894) solid;
-}
-
-.card_body.enterprise {
-  flex-direction: column;
-}
-
-.card_body--enterprise {
-  flex-direction: row;
 }
 
 hr {
@@ -245,6 +264,16 @@ hr {
 
 .card_body-text {
   padding-left: 10px;
+}
+
+.card-plan.card-plan--landscape .row {
+	flex-wrap: nowrap;
+	gap: 50px;
+}
+
+.row.no-gutter [class^='col'] {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .list-title {
@@ -260,6 +289,82 @@ hr {
 
 .bg-lightblue {
   background-color: #b3d0e7;
+}
+
+.team-logo {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+
+}
+
+.icon {
+  padding-right: 10px;
+}
+
+.card-button {
+  margin-bottom: 30px;
+}
+
+.card_subtitle {
+  padding-bottom: 50px;
+}
+
+.find-partner {
+  padding: 70px 0 0 50px;
+}
+
+.find-partner_title {
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+
+.find-partner_text {
+  font-size: 20px;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+
+.button--gray {
+  background-color: white;
+  color: gray;
+  border: 2px gray solid;
+}
+
+.dropbox-business_title {
+  font-size: 50px;
+  padding: 150px 0 50px;
+}
+
+.dropbox-business_text {
+  font-size: 25px;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+
+.dropbox-business_description {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.dropbox-business_column {
+  padding: 20px;
+}
+
+.anchor {
+  text-decoration: underline;
+  color: blue;
+}
+
+.business-teams {
+  font-size: 50px;
+  padding-top: 200px;
+}
+
+.business-team_anchor {
+  padding: 75px 0 0;
 }
 
 /* debug */
