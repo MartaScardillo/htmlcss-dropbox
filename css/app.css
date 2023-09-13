@@ -34,6 +34,10 @@ li {
   padding: 5px;
 }
 
+*[class^='col-'] {
+  height: 100%;
+}
+
 .col-4 {
   flex-basis: calc((100% / 12) * 4);
 }
@@ -159,30 +163,99 @@ li {
 .card {
   display: flex;
   flex-direction: column;
+  
 }
 
 .card-category {
   padding: 10px 0;
   width: 100%;
+  border: 1px rgba(151, 151, 151, 0.894) solid;
 }
 
 .card_title {
   font-size: 25px;
-  padding: 20px 0;
+  padding: 10px 0 20px;
 }
 
 .card_price {
   font-weight: 800;
+  padding-bottom: 20px;
+  display: block;
 }
 
 .card_price-detail {
   font-weight: 200;
   color: rgba(151, 151, 151, 0.894);
+  padding-bottom: 40px;
 }
 
 .list--column {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.card_button {
+  padding: 40px 0 30px 0;
+}
+
+.card_button > .button{
+  padding: 10px 20px;
+  width: 100%;
+  display: inline-block;
+}
+
+.list_item {
+  display: flex;
+  padding: 20px 0;
+
+}
+
+.icon {
+  padding-right: 5px;
+}
+
+.card_buy-now {
+  padding-bottom: 30px;
+}
+
+.card_buy-now > a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.card_body {
+  padding: 30px;
+  border: 1px rgba(151, 151, 151, 0.894) solid;
+}
+
+.card_body.enterprise {
+  flex-direction: column;
+}
+
+.card_body--enterprise {
+  flex-direction: row;
+}
+
+hr {
+  width: 50px;
+  color: rgba(151, 151, 151, 0.63);
+  margin-bottom: 50px;
+}
+
+.card_body-text {
+  padding-left: 10px;
+}
+
+.list-title {
+  font-weight: 800;
+  padding-bottom: 50px;
+}
+
+.enterprise {
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .bg-lightblue {
