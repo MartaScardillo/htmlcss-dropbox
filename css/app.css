@@ -367,6 +367,31 @@ hr {
   padding: 75px 0 0;
 }
 
+.team-logo {
+  filter: invert(100%);
+}
+
+.carousel {
+  margin-top: 150px;
+}
+
+.carousel_details {
+  padding: 50px;
+}
+
+.team-logo--active {
+  padding-right: 200px;
+}
+
+.team-logo_hr {
+  width: 100px;
+  margin-top: 50px;
+}
+
+.bg-green {
+  background-color: #278438;
+}
+
 /* debug */
 
 .debug .container.large {
